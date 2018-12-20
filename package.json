@@ -1,6 +1,6 @@
 {
   "name": "chilts",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A personal card for Andrew Chilton (@andychilton)",
   "scripts": {
     "card": "node bin/card.js"
