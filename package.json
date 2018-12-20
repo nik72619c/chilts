@@ -2,26 +2,27 @@
   "name": "chilts",
   "version": "2.0.0",
   "description": "A personal card for Andrew Chilton (@andychilton)",
-  "main": "index.js",
+  "scripts": {
+    "card": "node bin/card.js"
+  },
   "bin": {
-    "bitandbang": "./bin/card.js"
+    "card": "./bin/card.js"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/chilts/chilts.git"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "Tierney Cyren <hello@bnb.im> (http://bnb.im)",
-  "license": "MIT",
   "dependencies": {
-    "boxen": "^2.1.0",
-    "chalk": "^2.4.1",
-    "commander": "^2.19.0"
+    "npxcard": "^0.1.0"
   },
-  "devDependencies": {
-    "standard": "^12.0.1"
-  }
+  "author": "Tierney Cyren <hello@bnb.im> (http://bnb.im)",
+  "contributors": [
+    "Andrew Chilton <andychilton@gmail.com> (https://chilts.org)"
+  ],
+  "keywords": [
+    "npxcard",
+    "npx",
+    "card"
+  ],
+  "license": "MIT"
 }

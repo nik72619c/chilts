@@ -2,8 +2,7 @@
 // ----------------------------------------------------------------------------
 
 // npm
-var chalk = require('chalk')
-var boxen = require('boxen')
+var npxcard = require('npxcard')
 
 // ----------------------------------------------------------------------------
 // setup
@@ -37,48 +36,10 @@ const sections = [
   },
 ]
 
-// start the output
-const lines = []
-
-// output the sections
-sections.forEach(section => {
-  lines.push(section.title)
-  lines.push(chalk.green(''.padStart(section.title.length, '-')))
-  lines.push('')
-  section.details.forEach(detail => {
-    if (!detail) {
-      lines.push('')
-      return
-    }
-    const line = [
-      chalk.white.bold(detail[0].padStart(12, ' ')),
-      chalk.green(' : '),
-      detail[1].substr(0, 8) === 'https://'
-        ? chalk.cyan(detail[1])
-        : chalk.white(detail[1])
-    ].join('')
-
-    lines.push(line)
-  })
-  lines.push('')
-})
-
-lines.pop()
-
 // ----------------------------------------------------------------------------
 // output
 
-const content = lines.join('\n')
-
-// Define options for Boxen
-let options = {
-  padding: 1,
-  margin: 1,
-  borderColor: 'green',
-  borderStyle: 'double-single',
-}
-
-const output = boxen(content, options)
+const output = npxcard(sections)
 console.log(output)
 
 // ----------------------------------------------------------------------------
