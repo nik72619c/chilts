@@ -1,6 +1,6 @@
 {
   "name": "chilts",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "A personal card for Andrew Chilton (@andychilton)",
   "main": "index.js",
   "bin": {

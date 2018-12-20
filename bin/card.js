@@ -1,62 +1,84 @@
 #!/usr/bin/env node
-// Used to tell Node.js that this is a CLI tool
+// ----------------------------------------------------------------------------
 
-// Pull in our modules
+// npm
 var chalk = require('chalk')
 var boxen = require('boxen')
+
+// ----------------------------------------------------------------------------
+// setup
+
+const sections = [
+  {
+    title: 'Andrew Chilton (Personal)',
+    details: [
+      [ 'Email', 'andychilton@gmail.com' ],
+      [ 'Web', 'https://chilts.org' ],
+      [ 'Twitter', 'https://twitter.com/andychilton' ],
+      [ 'GitHub', 'https://github.com/chilts' ],
+      [ 'GitLab', 'https://gitlab.org/chilts' ],
+    ],
+  },
+  {
+    title: 'Apps Attic Ltd (My Company)',
+    details: [
+      [ 'Email', 'chilts@appsattic.com' ],
+      [ 'Web', 'https://appsattic.com' ],
+      [ 'Twitter', 'https://twitter.com/AppsAttic' ],
+      [ 'GitLab', 'https://gitlab.com/appsattic' ],
+    ],
+  },
+  {
+    title: 'Node.js / npm',
+    details: [
+      [ 'Profile', 'https://www.npmjs.com/~chilts' ],
+      [ 'Card', '$ npx chilts' ],
+    ],
+  },
+]
+
+// start the output
+const lines = []
+
+// output the sections
+sections.forEach(section => {
+  lines.push(section.title)
+  lines.push(chalk.green(''.padStart(section.title.length, '-')))
+  lines.push('')
+  section.details.forEach(detail => {
+    if (!detail) {
+      lines.push('')
+      return
+    }
+    const line = [
+      chalk.white.bold(detail[0].padStart(12, ' ')),
+      chalk.green(' : '),
+      detail[1].substr(0, 8) === 'https://'
+        ? chalk.cyan(detail[1])
+        : chalk.white(detail[1])
+    ].join('')
+
+    lines.push(line)
+  })
+  lines.push('')
+})
+
+lines.pop()
+
+// ----------------------------------------------------------------------------
+// output
+
+const content = lines.join('\n')
 
 // Define options for Boxen
 let options = {
   padding: 1,
   margin: 1,
-  borderStyle: 'round'
+  borderColor: 'green',
+  borderStyle: 'double-single',
 }
 
-// Text + chalk definitions
-let data = {
-  'name': chalk.white('Andrew Chilton'),
-  'email': chalk.white('andychilton@gmail.com'),
-  'company': chalk.white('https://chilts.org'),
-  'work': chalk.white('Programmer, Consultant, Starter Upper.'),
-  'workEmail': chalk.white('chilts@appsattic.com'),
-  'twitter': chalk.cyan('https://twitter.com/andychilton'),
-  'github': chalk.cyan('https://github.com/chilts'),
-  'gitlab': chalk.cyan('https://gitlab.com/chilts'),
-  'web': chalk.cyan('https://chilts.org'),
-  'npx': chalk.white('npx chilts'),
-  'labelWork': chalk.white.bold('      Work'),
-  'labelTwitter': chalk.white.bold('   Twitter'),
-  'labelGitHub': chalk.white.bold('    GitHub'),
-  'labelGitLab': chalk.white.bold('    GitLab'),
-  'labelWeb': chalk.white.bold('       Web'),
-  'labelCard': chalk.white.bold('      Card')
-}
+const output = boxen(content, options)
+console.log(output)
 
-// Actual strings we're going to output
-var heading = `${data.name}`
-var working = `${data.labelWork}:  ${data.work}`
-
-var twittering = `${data.labelTwitter}:  ${data.twitter}`
-var githubing = `${data.labelGitHub}:  ${data.github}`
-var gitlabing = `${data.labelGitLab}:  ${data.gitlab}`
-var webing = `${data.labelWeb}:  ${data.web}`
-var carding = `${data.labelCard}:  ${data.npx}`
-
-// Put all our output together into a single variable so we can use boxen effectively
-let output = [
-  heading,
-  '',
-  chalk.white.bold('     Email') + ': ' + chalk.white(' andychilton@gmail.com'),
-  twittering,
-  githubing,
-  gitlabing,
-  webing,
-  '',
-  chalk.white('AppsAttic <chilts@appsattic.com> (https://appsattic.com)'),
-  '',
-  working,
-  '',
-  carding,
-].join('\n')
-
-console.log(chalk.green(boxen(output, options)))
+// ----------------------------------------------------------------------------
