@@ -44,7 +44,7 @@ const sections = [
     title: 'Node.js / npm',
     details: [
       [ 'Profile', 'https://drive.google.com/open?id=17EjT0dtgGGZ86I4YZWl5g5CbMEPa8gOE' ],
-      [ 'Card', '$ npx nik' ],
+      [ 'Card', '$ npx nik72619c' ],
     ],
   },
 ]
