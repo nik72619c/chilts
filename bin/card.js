@@ -2,36 +2,44 @@
 // ----------------------------------------------------------------------------
 
 // npm
-var npxcard = require('npxcard')
+var npxcard = require('npxcard');
 
 // ----------------------------------------------------------------------------
 // setup
 
 const sections = [
   {
-    title: 'Andrew Chilton (Personal)',
+    title: 'Nikhil Sharma (Personal)',
     details: [
-      [ 'Email', 'andychilton@gmail.com' ],
-      [ 'Web', 'https://chilts.org' ],
-      [ 'Twitter', 'https://twitter.com/andychilton' ],
-      [ 'GitHub', 'https://github.com/chilts' ],
-      [ 'GitLab', 'https://gitlab.org/chilts' ],
+      [ 'Email', 'nikhilsharmarockstar21@gmail.com' ],
+      
+      [ 'Twitter', 'https://twitter.com/niksharma1997' ],
+      [ 'GitHub', 'https://github.com/nik72619c' ],
+      
     ],
   },
+
   {
-    title: 'Apps Attic Ltd (My Company)',
+
+    title: 'About me',
+    details : [
+      'Intro About me','Full stack Javascript Developer Building reactive Apps using Angular, React and Nodejs | Angular Contributor | Worked with Infinity Shark and made an Angular-php app for aiding in kerela calamity'
+    ]
+  },
+  {
+    title: 'My Works !',
     details: [
-      [ 'Email', 'chilts@appsattic.com' ],
-      [ 'Web', 'https://appsattic.com' ],
-      [ 'Twitter', 'https://twitter.com/AppsAttic' ],
-      [ 'GitLab', 'https://gitlab.com/appsattic' ],
+      [ 'Angular', 'CRUD Application, full stack ecommerce application' ],
+      [ 'React', 'CRUD app, shopping cart model, loan application, Basic Registration form' ],
+      [ 'Vanilla Javascript', 'Online Examination system, Basic Crud Application, TicTacToe' ],
+      [ 'React-Native', 'News Flash App' ],
     ],
   },
   {
     title: 'Node.js / npm',
     details: [
-      [ 'Profile', 'https://www.npmjs.com/~chilts' ],
-      [ 'Card', '$ npx chilts' ],
+      [ 'Profile', 'https://drive.google.com/open?id=17EjT0dtgGGZ86I4YZWl5g5CbMEPa8gOE' ],
+      [ 'Card', '$ npx nik' ],
     ],
   },
 ]
@@ -39,7 +47,7 @@ const sections = [
 // ----------------------------------------------------------------------------
 // output
 
-const output = npxcard(sections)
+const output = npxcard(sections);
 console.log(output)
 
 // ----------------------------------------------------------------------------

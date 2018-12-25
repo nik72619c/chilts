@@ -1,7 +1,7 @@
 {
-  "name": "chilts",
+  "name": "nikhil",
   "version": "3.0.0",
-  "description": "A personal card for Andrew Chilton (@andychilton)",
+  "description": "A personal card for Nikhil Sharma (@niksharma1997)",
   "scripts": {
     "card": "node bin/card.js"
   },
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chilts/chilts.git"
+    "url": "https://github.com/nik72619c/chilts.git"
   },
   "dependencies": {
     "npxcard": "^0.1.0"
