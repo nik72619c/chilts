@@ -1,4 +1,4 @@
-# Andrew Chilton #
+# Nikhil Sharma #
 
 It me!
 
@@ -7,7 +7,7 @@ It me!
 Via npx:
 
 ```
-npx chilts
+npx nik
 ```
 
 ## Credit ##
