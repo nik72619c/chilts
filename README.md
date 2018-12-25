@@ -7,7 +7,7 @@ It me!
 Via npx:
 
 ```
-npx nik
+npx nik72619c
 ```
 
 ## Credit ##
