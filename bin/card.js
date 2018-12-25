@@ -20,11 +20,16 @@ const sections = [
   },
 
   {
-
+    
     title: 'About me',
-    details : [
-      'Intro About me','Full stack Javascript Developer Building reactive Apps using Angular, React and Nodejs | Angular Contributor | Worked with Infinity Shark and made an Angular-php app for aiding in kerela calamity'
-    ]
+      details :[
+
+        [
+        
+          'Introduction', 'Full stack Javascript Developer Building reactive Apps using Angular, React and Nodejs '
+        ],
+        ['','Worked with Infinity Shark and made an Angular-php app for aiding in kerela calamity']
+      ] ,
   },
   {
     title: 'My Works !',
